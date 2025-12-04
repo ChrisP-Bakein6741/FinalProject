@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pitcher Progression</title>
+    <link rel="stylesheet" href="style-2.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .chart-wrapper {
+            width: 90%;
+            max-width: 1000px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            height: 500px;
+        }
+        .controls {
+            text-align: center;
+            margin: 20px 0;
+            background-color: #e9ecef;
+            padding: 15px;
+            border-radius: 8px;
+            display: inline-block;
+        }
+        select {
+            padding: 5px;
+            margin-left: 10px;
+            font-size: 1em;
+        }
+        h2 { text-align: center; color: #333; }
+        body { text-align: center; font-family: sans-serif; }
+    </style>
+</head>
+<body>
+
+    <h1>Pitching Data Portal</h1>
+
+    <div id="navbar"></div>
+
+    <section>
+        <h2>Average Effective Velocity Progression</h2>
+        
+        <div class="controls">
+            <label for="player">Select Player:</label>
+            <select id="player">
+            <option value="">Select player</option>
+            </select>
+        </div>
+
+        <div class="chart-wrapper">
+            <canvas id="velocityChart"></canvas>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="lineGraph.js"></script>
+
+</body>
+</html>
